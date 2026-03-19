@@ -28,43 +28,43 @@ const PrivateRoutes = [
     ),
     children: [
       {
-        path: "main",
+        path: "home",
         element: <Home />,
       },
       {
-        path: "main/products",
+        path: "products",
         element: <Products />,
       },
       {
-        path: "main/vendors",
+        path: "vendors",
         element: <Vendors />,
       },
       {
-        path: "main/customers",
+        path: "customers",
         element: <Customers />,
       },
       {
-        path: "main/locations",
+        path: "locations",
         element: <Locations />,
       },
       {
-        path: "operations/purchases",
+        path: "purchases",
         element: <Purchases />,
       },
       {
-        path: "operations/daily-transactions",
+        path: "daily-transactions",
         element: <DailyTransactions />,
       },
       {
-        path: "operations/inventory",
+        path: "inventory",
         element: <Inventory />,
       },
       {
-        path: "operations/invoices",
+        path: "invoices",
         element: <Invoices />,
       },
       {
-        path: "operations/payments",
+        path: "payments",
         element: <Payments/>,
       },
       {
@@ -72,11 +72,11 @@ const PrivateRoutes = [
         element: <Reports />,
       },
       {
-        path: "reports/ledger",
+        path: "ledger",
         element: <Ledger />,
       },
       {
-        path: "reports/finance",
+        path: "finance",
         element: <Finance />,
       },
       {

@@ -10,33 +10,33 @@ import {
 import { NavLink } from "./NavLink";
 
 const mainItems = [
-  { title: "Dashboard", url: "/dashboard/main", icon: LayoutDashboard },
-  { title: "Products", url: "/dashboard/main/products", icon: Package },
-  { title: "Vendors", url: "/dashboard/main/vendors", icon: Users },
-  { title: "Customers", url: "/dashboard/main/customers", icon: UserCheck },
-  { title: "Locations", url: "/dashboard/main/locations", icon: MapPin },
+  { title: "Dashboard", url: "/dashboard/home", icon: LayoutDashboard },
+  { title: "Products", url: "/dashboard/products", icon: Package },
+  { title: "Vendors", url: "/dashboard/vendors", icon: Users },
+  { title: "Customers", url: "/dashboard/customers", icon: UserCheck },
+  { title: "Locations", url: "/dashboard/locations", icon: MapPin },
 ];
 
 const operationItems = [
-  { title: "Purchases", url: "/dashboard/operations/purchases", icon: ShoppingCart },
-  { title: "Daily Transactions", url: "/dashboard/operations/daily-transactions", icon: ArrowRightLeft },
-  { title: "Inventory", url: "/dashboard/operations/inventory", icon: Warehouse },
-  { title: "Invoices", url: "/dashboard/operations/invoices", icon: FileText },
-  { title: "Payments", url: "/dashboard/operations/payments", icon: CreditCard },
+  { title: "Purchases", url: "/dashboard/purchases", icon: ShoppingCart },
+  { title: "Daily Transactions", url: "/dashboard/daily-transactions", icon: ArrowRightLeft },
+  { title: "Inventory", url: "/dashboard/inventory", icon: Warehouse },
+  { title: "Invoices", url: "/dashboard/invoices", icon: FileText },
+  { title: "Payments", url: "/dashboard/payments", icon: CreditCard },
 ];
 
 const reportItems = [
   { title: "Reports", url: "/dashboard/reports", icon: BarChart3 },
-  { title: "Ledger", url: "/dashboard/reports/ledger", icon: BookOpen },
-  { title: "Finance", url: "/dashboard/reports/finance", icon: Calculator },
+  { title: "Ledger", url: "/dashboard/ledger", icon: BookOpen },
+  { title: "Finance", url: "/dashboard/finance", icon: Calculator },
 ];
 
 const SettingItems = [
-  { title: "Settings", url: "/dashboard/users", icon: Settings },
+  { title: "Settings", url: "/dashboard/settings", icon: Settings },
 ]
 
 const UserItems = [
-   { title: "Users", url: "/dashboard/settings", icon: UsersRound },
+   { title: "Users", url: "/dashboard/users", icon: UsersRound },
 ]
 
 function NavSection({ label, items }: { label: string; items: typeof mainItems }) {
