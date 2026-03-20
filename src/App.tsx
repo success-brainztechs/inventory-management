@@ -7,10 +7,10 @@ import Routes from "./routes";
 
 export function App() {
 
-  const { fetchUserDetails } = useAuthStore();
+  const { fetchUserandTenantDetails } = useAuthStore();
 
   useEffect(()=>{
-    fetchUserDetails();
+    fetchUserandTenantDetails();
   },[]);
 
   return (

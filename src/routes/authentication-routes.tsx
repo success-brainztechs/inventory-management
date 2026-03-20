@@ -3,6 +3,7 @@ import PublicRoute from "./components/publicRoute";
 import Login from "@/pages/Auth/Login";
 import ProtectedRoute from "./components/protectedRoute";
 import CompleteProfile from "@/pages/Auth/CompleteProfile";
+import SignUp from "@/pages/Auth/SignUp";
 
 // ==============================|| AUTHENTICATION ROUTING ||============================== //
 
@@ -23,6 +24,10 @@ const AuthenticationRoutes = [
         path: "/login",
         element: <Login />,
       },
+      {
+        path: "/signup",
+        element: <SignUp/>
+      }
     ],
   },
   {

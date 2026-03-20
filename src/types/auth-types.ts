@@ -9,7 +9,16 @@ export interface AuthUser {
   image: string
   last_name: string
   phone_number: string
+  role: string
   is_profile_completed: boolean
+}
+
+export interface Tenant {
+  id: string
+  code: string
+  business_name: string
+  owner_name: string
+  owner_email: string
 }
 
 export interface AuthData {

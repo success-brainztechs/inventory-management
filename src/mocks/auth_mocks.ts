@@ -1,4 +1,4 @@
-import type { AuthResponse, AuthUser } from "@/types/auth-types";
+import type { AuthResponse, AuthUser, Tenant } from "@/types/auth-types";
 
 export const mockAuthUser: AuthUser = {
     user_id: "user-id-1",
@@ -9,7 +9,21 @@ export const mockAuthUser: AuthUser = {
     image: "https://picsum.photos/id/237/200/300",
     last_name: "Admin",
     phone_number: "9876543210",
+    role: "Admin",
     is_profile_completed: true
+}
+
+export const mockTenant: Tenant= {
+  id: "tenant-1",
+  code: "brainzshop",
+  business_name: "Brainz Shop",
+  owner_name: "Success Admin",
+  owner_email: "success.brainztechs+admin@gmail.com",
+};
+
+export const mockUserTenant: { tenant: Tenant, user: AuthUser} = {
+    tenant: mockTenant,
+    user: mockAuthUser
 }
 
 export const mockAuthResponse: AuthResponse = {

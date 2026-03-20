@@ -1,20 +1,21 @@
-import type { AuthData, AuthUser, RegistrationPayload } from "@/types/auth-types"
+import type { AuthData, AuthUser, RegistrationPayload, Tenant } from "@/types/auth-types"
 import { create } from "zustand";
 import type { useNavigate } from "react-router"
-import { mockAuthResponse, mockAuthUser } from "@/mocks/auth_mocks";
+import { mockAuthResponse, mockUserTenant } from "@/mocks/auth_mocks";
 
 interface AuthState {
   isLoading: boolean
   authData: AuthData | null
   userDetails: AuthUser | null
+  tenantDetails: Tenant | null
   isAuthenticated: boolean
   error: string | null
   initializeAuth: (navigate: ReturnType<typeof useNavigate>) => void
-  registerUserWorkspace: (
+  registerWorkspace: (
     payload: RegistrationPayload
   ) => Promise<void>;
-  fetchUserDetails: () => Promise<void>;
-  clearUserDetails: (navigate: ReturnType<typeof useNavigate>) => void;
+  fetchUserandTenantDetails: () => Promise<void>;
+  clearUserandTenantDetails: (navigate: ReturnType<typeof useNavigate>) => void;
   setIsAuthenticated: (auth: boolean) => void;
 }
 
@@ -22,6 +23,7 @@ export const useAuthStore = create<AuthState>((set) => ({
   isLoading: true,
   authData: null,
   userDetails: null,
+  tenantDetails: null,
   isAuthenticated: false,
   error: null,
   initializeAuth: (navigate: ReturnType<typeof useNavigate>) => {
@@ -35,12 +37,13 @@ export const useAuthStore = create<AuthState>((set) => ({
     }
   },
 
-  registerUserWorkspace: async (payload) => {
+  registerWorkspace: async (payload) => {
     set({ isLoading: true });
     try{
       // const response = await registrationService(payload)
       console.log("payload: ", payload)
       const response = mockAuthResponse;
+
       set({ authData: response.data });
     } catch(error) {
       console.error("Failed to register user workspace", error);
@@ -49,12 +52,12 @@ export const useAuthStore = create<AuthState>((set) => ({
     }
   },
 
-  fetchUserDetails: async () => {
+  fetchUserandTenantDetails: async () => {
     set({ isLoading: true });
     try{
       // const response = await fetchUserDetailsService();
-      const response = mockAuthUser
-      set({ userDetails: response, isAuthenticated: true })
+      const response = mockUserTenant
+      set({ userDetails: response.user, tenantDetails: response.tenant, isAuthenticated: true })
     } catch (error) {
       console.error("Failed to fetch user details", error);
     } finally {
@@ -62,10 +65,11 @@ export const useAuthStore = create<AuthState>((set) => ({
     }
   },
 
-  clearUserDetails: (navigate: ReturnType<typeof useNavigate>) => {
+  clearUserandTenantDetails: (navigate: ReturnType<typeof useNavigate>) => {
     set({
       authData: null,
       userDetails: null,
+      tenantDetails: null,
       isAuthenticated: false,
       error: null,
     });
