@@ -8,3 +8,8 @@ export interface ResponseT<T = any> {
   message: string;
   data: T;
 }
+
+export interface OffsetPaginationBase {
+  limit: number;
+  offset: number;
+}

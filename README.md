@@ -1,21 +1,41 @@
-# React + TypeScript + Vite + shadcn/ui
+# Inventory Tracker
 
-This is a template for a new Vite project with React, TypeScript, and shadcn/ui.
+Inventory Tracker is a management application designed to streamline and simplify inventory tracking.
 
-## Adding components
+## Features
 
-To add components to your app, run the following command:
+`InvenTrack` is built using a multi-tenant architecture, enabling efficient management across multiple domains. Its key features include:
+
+- Easily organize and maintain your **product catalog**
+- Keep track of **vendors** and manage supplier relationships
+- Maintain detailed records of your **customers**
+- Structure and monitor inventory across multiple **locations**
+- Record and oversee all **transactions** with clarity
+- Handle **billings** and **invoices** with ease and accuracy
+- Generate insightful **reports**, **ledgers**, and financial analyses
+
+## How to Use
+
+Clone the repository and follow these steps:
+
+### 1. Install Dependencies
 
 ```bash
-npx shadcn@latest add button
+npm install
 ```
 
-This will place the ui components in the `src/components` directory.
+### 2. Start Development Server
 
-## Using components
-
-To use the components in your app, import them as follows:
-
-```tsx
-import { Button } from "@/components/ui/button"
+```bash
+npm run dev
 ```
+
+### Tech Stack
+
+This project is built using:
+
+* React
+* TypeScript
+* Tailwind CSS
+* Vite
+* shadcn

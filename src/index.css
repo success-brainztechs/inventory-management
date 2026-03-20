@@ -127,3 +127,18 @@
     @apply font-sans;
     }
 }
+
+@layer components {
+  .stat-card {
+    @apply bg-card rounded-lg border p-5 shadow-sm transition-shadow hover:shadow-md;
+  }
+  .page-header {
+    @apply mb-6;
+  }
+  .page-title {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+  .page-description {
+    @apply text-sm text-muted-foreground mt-1;
+  }
+}
