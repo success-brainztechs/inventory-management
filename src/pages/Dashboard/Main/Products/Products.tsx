@@ -71,8 +71,8 @@ const Products = () => {
                 <TableHead>SKU</TableHead>
                 <TableHead>Category</TableHead>
                 <TableHead>Unit</TableHead>
-                <TableHead className="text-right">Cost</TableHead>
-                <TableHead className="text-right">Price</TableHead>
+                <TableHead className="text-right">Cost (Rs.)</TableHead>
+                <TableHead className="text-right">Price (Rs.)</TableHead>
                 <TableHead className="text-right">Stock</TableHead>
               </TableRow>
             </TableHeader>
@@ -87,8 +87,8 @@ const Products = () => {
                   </TableCell>
                   <TableCell>{p.category}</TableCell>
                   <TableCell>{p.unit}</TableCell>
-                  <TableCell className="text-right">₹{p.cost_price}</TableCell>
-                  <TableCell className="text-right">₹{p.price}</TableCell>
+                  <TableCell className="text-right">{p.cost_price}</TableCell>
+                  <TableCell className="text-right">{p.price}</TableCell>
                   <TableCell className="text-right font-medium">
                     {p.stock}
                   </TableCell>

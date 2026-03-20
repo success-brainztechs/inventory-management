@@ -13,7 +13,7 @@ const Home = () => {
   const stats = [
     {
       label: "Inventory Value",
-      value: `₹${mockDashboardStats.inventory_value.toLocaleString()}`,
+      value: `Rs ${mockDashboardStats.inventory_value.toLocaleString()}`,
       icon: Package,
       color: "text-primary",
     },
@@ -25,13 +25,13 @@ const Home = () => {
     },
     {
       label: "Pending Invoicing",
-      value: `₹${mockDashboardStats.pending_invoicing.toLocaleString()}`,
+      value: `Rs ${mockDashboardStats.pending_invoicing.toLocaleString()}`,
       icon: FileText,
       color: "text-warning",
     },
     {
       label: "Outstanding Balance",
-      value: `₹${mockDashboardStats.outstanding_balance.toLocaleString()}`,
+      value: `Rs ${mockDashboardStats.outstanding_balance.toLocaleString()}`,
       icon: Users,
       color: "text-destructive",
     },
@@ -87,7 +87,7 @@ const Home = () => {
                     </div>
                     <div className="text-right">
                       <p className="text-sm font-medium">
-                        ₹{txn.price.toLocaleString()}
+                        Rs {txn.price.toLocaleString()}
                       </p>
                       <Badge
                         variant={
